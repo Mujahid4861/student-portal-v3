@@ -1,0 +1,89 @@
+<!-- welcome.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to IBBU Portal</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .loader {
+      border: 6px solid #f3f3f3;
+      border-top: 6px solid #3498db;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: spin 1s linear infinite;
+      margin: 20px auto;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .welcome-box {
+      padding: 40px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      backdrop-filter: blur(6px);
+    }
+
+    .btn {
+  padding: 12px 30px;
+  background-color: #00aaff;
+  color: white !important; /* this will FORCE white font */
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0088cc;
+}
+
+  </style>
+</head>
+<body>
+  <div class="welcome-box">
+    <h1>👋 Welcome to IBBU Student Portal</h1>
+    <p><strong>Ibrahim Badamasi Babangida University, Lapai, Suleja</strong></p>
+    
+    <div class="loader"></div>
+    <p>Loading, please wait...</p>
+
+    <button class="btn" onclick="goToLogin()">
+        <a href="signup.html">COTINUE TO LOGIN to Login </a></button>
+  </div>
+
+  <script>
+    function goToLogin() {
+      window.location.href = "index.html";
+    }
+
+    // Simulate loading
+    setTimeout(() => {
+      document.querySelector('.loader').style.display = "none";
+    }, 3000);
+  </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Signup - IBBU Student Portal</title>
+  <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+  
+  <div class="container">
+    
+    <img src="cf9fea21-e3fb-4726-902b-d1a7c4e499b1.jpg" alt="IBBU Logo" class="logo" /> </p>
+  
+    <h1>📝 IBBU Student Registration</h1>
+    <p class="subtitle">Create your student portal account</p>
+
+    <form id="signupForm">
+      <input type="text" id="fullName" placeholder="Full Name" required>
+      <input type="text" id="matricNo" placeholder="Matric Number" required>
+      <input type="email" id="email" placeholder="Email Address" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+     <a href="dashbord.html">
+      <button type="submit"> <a href="dashbord.html"> SIGNUp</a></button>
+    </a>
+      <p class="forgot"><a href="login.html">Already have an account? Login</a></p>
+    </form>
+  </div>
+
+  <script src="signup.js"></script>
+  <script>
+    javascript
+function togglePassword() {
+  const password = document.getElementById("password");
+  if (password.type === "password") {
+    password.type = "text";
+  } else {
+    password.type = "password";
+  }
+}
+
+document.getElementById("loginForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+  const matric = document.getElementById("matric").value;
+  const password = document.getElementById("password").value;
+
+  if (matric === "" || password === "") {
+    alert("❌ Both fields are required!");
+  } else {
+    alert("✅ Login Successful. Welcome to IBBU!");
+    // redirect or load dashboard here
+  }
+});
+  </script>
+</body>
+</html>

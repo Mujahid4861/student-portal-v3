@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>IBBU PDF Library</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">📚 IBBU PDF Library</div>
+    <ul>
+      <li><a href="dashbord.html">Home</a></li>
+      <li><a href="pdfs/CSC_113.pdf.pdf">PDFs</a></li>
+      <li><a href="login.html">Profile</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main -->
+  <div class="container">
+    <h2>📖 Select a PDF to View</h2>
+    <div id="pdf-buttons">
+      <!-- JS Will add buttons here -->
+    </div>
+    <form id="uploadForm">
+        <input type="file" accept="application/pdf" />
+        <button type="submit">Upload PDF</button>
+      </form>
+      <input type="text" id="search" placeholder="Search PDFs..." />
+      <a href="pdfs/CSC_113.pdf" download>Download PDF</a>
+      <button onclick="toggleTheme()">Switch Theme</button>
+
+    <div id="viewer-box">
+      <iframe id="pdf-viewer" src="" frameborder="0" width="100%" height="600px"></iframe>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
